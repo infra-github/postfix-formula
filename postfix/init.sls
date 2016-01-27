@@ -16,7 +16,7 @@ postfix:
 {% if 'aliases' in pillar.get('postfix', '') %}
 {{ postfix.aliases_file }}:
   file.managed:
-    - source: salt://postfix/aliases
+    - source: salt://postfix/files/aliases
     - user: root
     - group: root
     - mode: 644
